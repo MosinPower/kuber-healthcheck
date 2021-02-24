@@ -5,7 +5,7 @@ import org.springframework.boot.actuate.endpoint.annotation.*;
 import org.springframework.stereotype.Component;
 
 @Component
-@Endpoint(id = "spec")
+@Endpoint(id = "special")
 public class CustomActuatorEndpoint {
 
     @Value(value = "${mp.custom.flag:true}")
