@@ -8,8 +8,9 @@ COPY --from=clone /app/kuber-healthcheck /app
 RUN mvn install
 
 FROM openjdk:8-jdk-alpine
+WORKDIR /app
 RUN addgroup -S spring && adduser -S spring -G spring
 USER spring:spring
 ARG JAR_FILE=/app/target/*.jar
-COPY ${JAR_FILE} app.jar
-ENTRYPOINT ["java","-jar","/app.jar"]
+COPY --from=build ${JAR_FILE} app.jar
+ENTRYPOINT ["java","-jar","app.jar"]
