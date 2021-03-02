@@ -1,11 +1,11 @@
-package com.github.mosinpower.actuatorservice;
+package com.github.mosinpower.actuatorservice.actuator;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.actuate.endpoint.annotation.*;
 import org.springframework.stereotype.Component;
 
 @Component
-@Endpoint(id = "special")
+@Endpoint(id = "spec")
 public class CustomActuatorEndpoint {
 
     @Value(value = "${mp.custom.flag:true}")

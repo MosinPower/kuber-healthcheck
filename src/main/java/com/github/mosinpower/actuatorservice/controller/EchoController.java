@@ -1,13 +1,14 @@
-package com.github.mosinpower.actuatorservice;
+package com.github.mosinpower.actuatorservice.controller;
 
-import java.util.concurrent.atomic.AtomicLong;
-
-import org.springframework.stereotype.Controller;
+import com.github.mosinpower.actuatorservice.dto.JustDto;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.RestController;
 
-@Controller
+import java.util.concurrent.atomic.AtomicLong;
+
+@RestController
 public class EchoController {
 
   private final AtomicLong counter = new AtomicLong();

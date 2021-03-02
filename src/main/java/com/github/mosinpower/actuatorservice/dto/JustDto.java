@@ -1,4 +1,4 @@
-package com.github.mosinpower.actuatorservice;
+package com.github.mosinpower.actuatorservice.dto;
 
 import lombok.Data;
 
