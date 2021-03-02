@@ -41,7 +41,7 @@ public class EchoControllerTest {
     public void shouldReturn200WhenSendingRequestToInfo() {
         @SuppressWarnings("rawtypes")
         ResponseEntity<Map> entity = this.testRestTemplate.getForEntity(
-                "http://localhost:" + this.mgt + "/info", Map.class);
+                "http://localhost:" + this.mgt + "/actuator/info", Map.class);
 
         then(entity.getStatusCode()).isEqualTo(HttpStatus.OK);
     }
