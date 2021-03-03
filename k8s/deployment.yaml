@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: kuber-healthcheck-deployment
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: kuber-healthcheck
+  template:
+    metadata:
+      labels:
+        app: kuber-healthcheck
+    spec:
+      containers:
+        - name: kuber-healthcheck
+          image: mosin/kuber-healthcheck:v1
+          ports:
+            - containerPort: 80
+              name: server

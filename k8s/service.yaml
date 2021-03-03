@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: kuber-healthcheck-service
+spec:
+  selector:
+    app: kuber-healthcheck
+  ports:
+    - port: 80
+      targetPort: server
+  type: NodePort
