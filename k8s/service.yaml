@@ -7,5 +7,6 @@ spec:
     app: kuber-healthcheck
   ports:
     - port: 80
-      targetPort: server
+      targetPort: 80
+      protocol: TCP
   type: NodePort

@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: kuber-healthcheck-deployment
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
       app: kuber-healthcheck
@@ -17,4 +17,4 @@ spec:
           image: mosin/kuber-healthcheck:v1
           ports:
             - containerPort: 80
-              name: server
+              name: web
